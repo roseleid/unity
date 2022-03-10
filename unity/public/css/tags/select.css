@@ -1,0 +1,20 @@
+select
+{
+    background:                 none;
+    border:                     1px solid var(--colors--outline);
+    border-radius:              8px;
+
+    display:                    flex;
+
+    flex:                       1;
+    font-size:                  1.00em;
+    font-weight:                400;
+
+    letter-spacing:             0.033rem;
+
+    margin:                     0.83rem 0px;
+
+    outline:                    none;
+
+    padding:                    16px;
+}

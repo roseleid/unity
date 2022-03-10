@@ -1,0 +1,31 @@
+@import url("./components/footer.css");
+@import url("./components/header.css");
+@import url("./components/nav.css");
+
+@import url("./elements/card.css");
+
+@import url("./google/fonts/open-sans.css");
+@import url("./google/icons.css");
+
+@import url("./params/background.css");
+@import url("./params/border-radius.css");
+@import url("./params/flex.css");
+@import url("./params/gap.css");
+@import url("./params/margin.css");
+@import url("./params/padding.css");
+@import url("./params/text-align.css");
+
+@import url("./tags/a.css");
+@import url("./tags/body.css");
+@import url("./tags/form.css");
+@import url("./tags/h.css");
+@import url("./tags/img.css");
+@import url("./tags/input.button.css");
+@import url("./tags/input.css");
+@import url("./tags/input.date.css");
+@import url("./tags/input.file.css");
+@import url("./tags/input.text.css");
+@import url("./tags/main.css");
+@import url("./tags/select.css");
+
+@import url("./values/colors.css");

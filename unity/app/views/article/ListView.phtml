@@ -1,0 +1,39 @@
+<?php
+
+require_once "../app/bootstrap.php";
+
+use App\Application;
+
+?>
+
+<div class="flex flex_direction--column gap--32px">
+    <form method="POST">
+        <div class="flex flex_direction--row">
+            <input name="search-articles" type="search" placeholder="Search for articles...">
+            <input class="outline-button" type="submit" value="Search">
+        </div>
+    </form>
+
+    <?php if (! Application::getAuthService()->isGuest()): ?>
+        <div class="flex flex_direction--row gap--16px">
+            <a href="/article/create">
+                <input class="outline-button" type="button" value="Create article">
+            </a>
+        </div>
+    <?php endif; ?>
+
+    <div class="flex flex_direction--column gap--32px">
+        <?php foreach ($values as $model): ?>
+            <a href="/article/<?= $model->id; ?>">
+                <div class="card card_width--100per">
+                    <h3>
+                        <?= $model->title; ?>
+                    </h3>
+                    <h4>
+                        <?= $model->description; ?>
+                    </h4>
+                </div>
+            </a>
+        <?php endforeach?>
+    </div>
+</div>

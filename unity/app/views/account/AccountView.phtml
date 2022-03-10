@@ -1,0 +1,94 @@
+<?php
+
+require_once "../app/Application.php";
+
+use App\Application;
+
+?>
+
+<div class="flex flex_direction--row gap--32px">
+    <a href="/account/edit">
+        <input class="primary-button" type="button" value="Edit Account">
+    </a>
+    <a href="/auth/signOut">
+        <input class="primary-button" type="button" value="Sign Out">
+    </a>
+    <a href="/account/delete">
+        <input class="outline-button" type="button" value="Delete Account">
+    </a>
+</div>
+
+<div class="flex flex_direction--column margin--64px margin--no_horizontal gap--32px">
+    <div class="flex flex_direction--row flex_align_items--center gap--32px">
+        <?php if (isset($values->image)): ?>
+            <img class="profile__image" src="data:image/jpeg;base64,<?= base64_encode($values->image); ?>"/>
+        <?php else: ?>
+            <img class="profile__image"
+                    src="https://ui-avatars.com/api/?name=<?= $values->name; ?>+<?= $values->surname; ?>"/>
+        <?php endif; ?>
+
+        <div class="flex flex_direction--column">
+            <h3>
+                @<?= $values->username; ?>
+                <?php if ($values->roleName <> "def"): ?>
+                    (<?= $values->roleName; ?>)
+                <?php endif; ?>
+            </h3>
+            <h6>
+                id: <?= $values->id; ?>
+            </h6>
+            <h4>
+                <?php echo "$values->name $values->middlename $values->surname"; ?>
+                <?php 
+                    $dateTime = DateTime::createFromFormat("Y-m-d H:i:s", $values->onlineDate);
+                    $date = date_format($dateTime, "j F Y");
+                    $time = date_format($dateTime, "H:i");
+                    echo "(last seen $date at $time)";
+                ?>
+            </h4>
+        </div>
+    </div>
+
+    <div class="flex flex_direction--column">
+        <div class="flex flex_direction--row flex_align_items--center gap--16px">
+            <span class="md_icon icon_size--32px">
+                email
+            </span>
+
+            <h5>
+                <?= $values->email; ?>
+            </h5>
+        </div>
+        <?php if ($values->phoneNumber <> null): ?>
+            <div class="flex flex_direction--row flex_align_items--center gap--16px">
+                <span class="md_icon icon_size--32px">
+                    phone
+                </span>
+
+                <h5>
+                    <?= $values->phoneNumber; ?>
+                </h5>
+            </div>
+        <?php endif; ?>
+        <?php if ($values->birthDate <> null): ?>
+            <div class="flex flex_direction--row flex_align_items--center gap--16px">
+                <span class="md_icon icon_size--32px">
+                    cake
+                </span>
+                
+                <h5>
+                    <?php
+                        $dateTime = DateTime::createFromFormat("Y-m-d", $values->birthDate);
+                        echo date_format($dateTime, "j F Y");
+
+                        $currentDateTime = date_create();
+                        $difference = date_diff($currentDateTime, $dateTime);
+                        $difference = $difference->format("%Y y.o");
+
+                        echo " ($difference)";
+                    ?>
+                </h5>
+            </div>
+        <?php endif; ?>
+    </div>
+</div>

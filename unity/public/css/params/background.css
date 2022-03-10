@@ -1,0 +1,20 @@
+.background--primary_container
+{
+    background:                 var(--colors--primary_container);
+
+    color:                      var(--colors--on_primary_container)
+}
+
+.background--tertiary_container
+{
+    background:                 var(--colors--tertiary_container);
+
+    color:                      var(--colors--on_tertiary_container)
+}
+
+.background--error_container
+{
+    background:                 var(--colors--error_container);
+
+    color:                      var(--colors--on_error_container)
+}

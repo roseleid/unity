@@ -1,0 +1,41 @@
+.padding--8px
+{
+    padding:                     8px;
+}
+
+.padding--16px
+{
+    padding:                     16px;
+}
+
+.padding--24px
+{
+    padding:                     24px;
+}
+
+.padding--32px
+{
+    padding:                     32px;
+}
+
+.padding--48px
+{
+    padding:                     48px;
+}
+
+.padding--64px
+{
+    padding:                     64px;
+}
+
+.padding--no_vertical
+{
+    padding-bottom:              0px;
+    padding-top:                 0px;
+}
+
+.padding--no_horizontal
+{
+    padding-left:                0px;
+    padding-right:               0px;
+}

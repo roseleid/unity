@@ -1,0 +1,23 @@
+footer
+{
+    background:                 var(--colors--primary_container);
+
+    color:                      var(--colors--on_primary_container);
+
+    margin:                     32px;
+}
+
+footer, footer > div
+{
+    align-items:                center;
+
+    display:                    flex;
+
+    flex-direction:             column;
+    flex-wrap:                  nowrap;
+}
+
+footer > div
+{
+    gap:                        32px;
+}

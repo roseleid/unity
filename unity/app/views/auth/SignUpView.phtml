@@ -1,0 +1,38 @@
+<form method="POST" class="flex flex_direction--column flex_justify_content--center" style="box-sizing: border-box;">
+    <div class="flex flex_direction--column flex_align_items--center">
+        <div class="flex flex_direction--row flex_justify_content--center gap--16px">
+            <div class="flex flex_direction--column">
+                <input name="name" type="text" required maxlength="24" placeholder="Name">
+                <input name="surname" type="text" required maxlength="24" placeholder="Surname">
+                <input name="middlename" type="text" maxlength="24" placeholder="Middlename">
+                <input name="username" type="text" required maxlength="16" placeholder="Username">
+
+                <select name="gender_id" required>
+                    <option value="" disabled selected hidden>Gender</option>
+                    <option value="1">Male</option>
+                    <option value="2">Female</option>
+                </select>
+            </div>
+            <div class="flex flex_direction--column">
+                <input name="email" type="email" required maxlength="320" placeholder="E-mail">
+                <input name="phoneNumber" type="tel" placeholder="Phone number">
+
+                <input name="birthDate" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="Birth date">
+
+                <input name="password" type="password" required maxlength="32" minlength="8" placeholder="Password">
+                <input name="repeat-password" type="password" required maxlength="32" minlength="8"  placeholder="Repeat password">
+            </div>
+            <div class="flex flex_direction--column">
+                <input name="image" type="file" accept="image/jpeg, image/png">
+            </div>
+        </div>
+
+        <div class="flex flex_direction--row gap--16px">
+            <a href="auth/signIn">
+                <input type="button" value="Go back">
+            </a>
+            
+            <input type="submit" value="Sign Up">
+        </div>
+    </div>
+</form>

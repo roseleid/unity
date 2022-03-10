@@ -1,0 +1,8 @@
+body
+{
+    background:                 var(--colors--background);
+
+    color:                      var(--colors--on_background);
+
+    margin:                     0px;
+}

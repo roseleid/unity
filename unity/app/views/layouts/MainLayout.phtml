@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <base href="/">
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+        <link rel="stylesheet" href="./css/generic.css">
+
+        <script src="./js/libs/jquery.3.6.0-dev.js"></script>
+        <script src="./js/header.js"></script>
+        <script src="./js/nav.js"></script>
+
+        <title> <?= "Unity - $title"; ?> </title>
+    </head>
+    <body>
+        <?php include "../app/views/components/HeaderComponent.phtml"; ?>
+        <?php include "../app/views/components/NavComponent.phtml"; ?>
+
+        <main>
+            <div class="margin--64px padding--32px border_radius--32px <?= isset($color) ? $color : "background--tertiary_container"; ?>"
+                    <?php if (isset($cover)): ?>
+                        style="background: url(data:image/jpeg;base64,$cover);"
+                    <?php endif; ?>
+            >
+                <div class="flex flex_direction--column gap--16px">
+                    <?php if (isset($icon)): ?>
+                        <span class="md_icon icon_size--48px">
+                            <?= $icon; ?>
+                        </span>
+                    <?php endif; ?>
+                    <h1> <?= $title; ?> </h1>
+                    <h2> <?= $description; ?> </h2>
+                </div>
+            </div>
+
+            <div class="main__content">
+                <?php include "../app/views/$viewName.phtml"; ?>
+            </div>
+        </main>
+        
+        <?php include "../app/views/components/FooterComponent.phtml"; ?>
+    </body>
+</html>

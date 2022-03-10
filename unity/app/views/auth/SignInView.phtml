@@ -1,0 +1,14 @@
+<form method="POST" class="flex" style="justify-content: center; box-sizing: border-box;">
+    <div class="flex flex_direction--column">
+        <input name="email" type="email" required maxlength="320" placeholder="E-mail">
+        <input name="password" type="password" required maxlength="32" minlength="8" placeholder="Password">
+
+        <div class="flex flex_direction--row flex_justify_content--space_between gap--16px">
+            <input class="flex flex_fit" type="submit" value="Sign In">
+            
+            <a href="auth/signUp">
+                <input type="button" value="Sign Up">
+            </a>
+        </div>
+    </div>
+</form>

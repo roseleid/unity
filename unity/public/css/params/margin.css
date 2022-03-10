@@ -1,0 +1,41 @@
+.margin--8px
+{
+    margin:                     8px;
+}
+
+.margin--16px
+{
+    margin:                     16px;
+}
+
+.margin--24px
+{
+    margin:                     24px;
+}
+
+.margin--32px
+{
+    margin:                     32px;
+}
+
+.margin--48px
+{
+    margin:                     48px;
+}
+
+.margin--64px
+{
+    margin:                     64px;
+}
+
+.margin--no_vertical
+{
+    margin-bottom:              0px;
+    margin-top:                 0px;
+}
+
+.margin--no_horizontal
+{
+    margin-left:                0px;
+    margin-right:               0px;
+}

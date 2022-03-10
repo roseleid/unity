@@ -1,0 +1,33 @@
+<?php
+
+require_once "../app/models/UserModel.php";
+
+require_once "../app/Application.php";
+
+use App\Models\UserModel;
+
+use App\Application;
+
+$model = UserModel::getSingle(function($item) use($values)
+{
+    return $item["id"] == $values->user_id;
+});
+
+?>
+
+<div class="flex flex_direction--column">
+    <div class="flex flex_direction--row">
+    <?php if (Application::getAuthService()->isAdmin() || Application::getAuthService()->getUserId() == $model->id): ?>
+        <div class="flex flex_direction--row gap--16px">
+            <a href="/article/<?= $values->id; ?>/edit">
+                <input class="primary-button" type="button" value="Edit Article">
+            </a>
+            <a href="/article/<?= $values->id; ?>/delete">
+                <input class="outline-button" type="button" value="Delete">
+            </a>
+        </div>
+    <?php endif; ?>
+    </div>
+
+    <?= htmlspecialchars_decode($values->value); ?>
+</div>

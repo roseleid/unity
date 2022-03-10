@@ -1,0 +1,82 @@
+input[type=button],
+input[type=submit]
+{
+    background:                 var(--colors--primary_container);
+    border:                     1px solid transparent;
+    border-radius:              32px;
+
+    color:                      var(--colors--on_primary_container);
+
+    font-size:                  1.00em;
+    font-weight:                400;
+
+    letter-spacing:             0.033rem;
+
+    margin:                     0.83rem 0px;
+
+    outline:                    none;
+
+    padding:                    16px;
+
+    text-align:                 center;
+    transition:                 0.2s ease;
+}
+
+input[type=button]:hover,
+input[type=submit]:hover
+{
+    background:                 var(--colors--secondary_container);
+
+    color:                      var(--colors--on_secondary_container);
+}
+
+input[type=button]:active,
+input[type=submit]:active
+{
+    background:                 var(--colors--secondary);
+
+    color:                      var(--colors--on_secondary);
+}
+
+input[type=button].primary-button
+{
+    border-radius:              64em;
+
+    padding:                    32px;
+}
+
+input[type=button].outline-button,
+input[type=submit].outline-button
+{
+    background:                 none;
+    border-color:               var(--colors--outline);
+    border-radius:              64em;
+
+    padding:                    32px;
+}
+
+input[type=button].outline-button:hover,
+input[type=submit].outline-button:hover
+{
+    background:                 var(--colors--outline_invariant);
+    border-color:               var(--colors--outline);
+}
+
+input[type=button].outline-button:active,
+input[type=submit].outline-button:active
+{
+    background:                 var(--colors--outline_invariant);
+    border-color:               var(--colors--outline);
+}
+
+input[type=button].align_self--flex-end,
+input[type=submit].align_self--flex-end
+{
+    align-self:                 flex-end;
+}
+
+div > input[type=submit].outline-button
+{
+    border-bottom-left-radius:  0px;
+    border-top-left-radius:     0px;
+}

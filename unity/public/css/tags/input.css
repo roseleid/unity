@@ -1,0 +1,6 @@
+input:invalid
+{
+    background:                 var(--colors--error_container) !important;
+
+    color:                      var(--colors--on_error_container) !important;
+}

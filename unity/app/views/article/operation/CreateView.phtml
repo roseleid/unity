@@ -1,0 +1,22 @@
+<form method="POST" class="flex flex_direction--column flex_justify_content--center" style="box-sizing: border-box;">
+    <div class="flex flex_direction--column flex_align_items--center">
+        <div class="flex flex_direction--row flex_justify_content--center gap--16px">
+            <div class="flex flex_direction--column">
+                <input name="title" type="text" required maxlength="32" placeholder="Title">
+                <textarea name="description" required maxlength="128" placeholder="Description"></textarea>
+                <input name="cover" type="file" accept="image/jpeg, image/png">
+            </div>
+            <div class="flex flex_direction--column">
+                <textarea name="value" required placeholder="Content"></textarea>
+            </div>
+        </div>
+
+        <div class="flex flex_direction--row gap--16px">
+            <a href="/articles">
+                <input type="button" value="Go back">
+            </a>
+            
+            <input type="submit" value="Create">
+        </div>
+    </div>
+</form>

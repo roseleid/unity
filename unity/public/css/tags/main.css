@@ -1,0 +1,4 @@
+main > div.main__content
+{
+    margin:                     0px calc(64px + 4%);
+}

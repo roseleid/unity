@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap");
+
+:root
+{
+    font-family:                "Open Sans";
+    font-size:                  1.00em;
+    font-weight:                400;
+
+    letter-spacing:             0.033rem;
+}

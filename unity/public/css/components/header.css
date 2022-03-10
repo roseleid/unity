@@ -1,0 +1,45 @@
+header
+{
+    background:                 var(--colors--background);
+
+    color:                      var(--colors--on_background);
+
+    height:                     64px;
+
+    position:                   sticky;
+    
+    top:                        0px;
+
+    transition:                 0.2s ease;
+
+    z-index:                    666;
+}
+
+header[active=true]
+{
+    background:                 var(--colors--primary_container);
+
+    color:                      var(--colors--on_primary_container);
+}
+
+header > div
+{
+    gap:                        32px;
+
+    margin:                     0px 32px;
+}
+
+header span#header__navbutton
+{
+    border:                     1px solid transparent;
+    border-radius:              64em;
+
+    cursor:                     pointer;
+
+    transition:                 0.2s ease;
+}
+
+header span#header__navbutton:hover
+{
+    border-color:               var(--colors--outline);
+}

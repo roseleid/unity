@@ -1,0 +1,51 @@
+nav
+{
+    background:                 var(--colors--background);
+    border:                     1px solid var(--colors--outline);
+    bottom:                     16px;
+
+    left:                       -100%;
+
+    color:                      var(--colors--on_background);
+
+    padding:                    16px;
+    position:                   fixed;
+
+    transition:                 0.5s ease;
+
+    width:                      320px;
+
+    z-index:                    666;
+}
+
+nav[active=true]
+{
+    left:                       16px;
+}
+
+nav > a
+{
+    border:                     1px solid transparent;
+    border-radius:              16px;
+    box-sizing:                 border-box;
+
+    display:                    block;
+
+    margin:                     8px 0px;
+
+    padding:                    8px;
+
+    transition:                 0.2s ease;
+
+    width:                      100%;
+}
+
+nav > a:hover
+{
+    background:                 var(--colors--outline);
+}
+
+nav > a:active
+{
+    border:                     1px solid var(--colors--on_background);
+}
